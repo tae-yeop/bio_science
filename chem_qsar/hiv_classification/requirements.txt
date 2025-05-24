@@ -1,0 +1,5 @@
+torch_geometric
+rdkit
+torchmetrics
+mordred
+deepchem

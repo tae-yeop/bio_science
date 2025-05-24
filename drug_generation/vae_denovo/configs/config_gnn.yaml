@@ -1,0 +1,17 @@
+model_type: gnn
+# Embedder
+embedding_size: 128
+hidden_layer_units: [256,256,256]
+# Encoder
+mem_sz: 256
+latent_dim: 128
+
+# Decoder
+
+data_path: /home/bio_science/drug_generation/vae_denovo/data/zinc_250k_splits.csv
+vocab_file_path: /home/bio_science/drug_generation/vae_denovo/tokens.txt
+precision: fp32
+learning_rate: 0.001
+beta: 0.001
+batch_size: 32
+workers: 8

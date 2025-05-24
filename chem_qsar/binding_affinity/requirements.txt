@@ -1,0 +1,8 @@
+torch_geometric
+rdkit
+torchmetrics
+mordred
+dgllife
+!pip install -q --pre dgl -f https://data.dgl.ai/wheels-test/torch-2.4/cu121/repo.html
+
+

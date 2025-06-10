@@ -1,5 +1,8 @@
 *.sdf
 *.csv
+*.xlsx
+*.smi
+*.tsv
 *.onnx
 *.pt
 *.pth
@@ -12,7 +15,6 @@ wandb
 weights
 temp
 checkpoints
-data
 runs
 .ipynb_checkpoints
 *.sdf

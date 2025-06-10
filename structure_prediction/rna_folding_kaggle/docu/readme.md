@@ -90,6 +90,8 @@ Supervised multi-task approaches are limited by the availability and accuracy of
 
 
 
+EternaFold or ViennaRNA: BPPM 생성
+
 host가 제공하는거
 RibonanzaNet 파인튜닝
 RibonanzaNet2 코드 제공
@@ -98,15 +100,62 @@ RibonanzaNet2 코드 제공
 
 
 쓸만한 아이디어
-DRfold2
+[DRfold2](https://github.com/leeyang/DRfold)
+- https://www.biorxiv.org/content/10.1101/2025.03.05.641632v1.full.pdf
 - RNA Composite Language Model (RCLM) 사용
+- MSA 전혀 쓰지 않고 이차구조만
+- MSA-based methods보단 정확하지 않음
+- inference 코드가 있는데 어떻게 활용할까?
+
+https://www.kaggle.com/code/hengck23/lb0-321-simple-drfold-no-msa
 
 
 
 Protein 예측하는 모델 파인튜닝?
 - Transfer learning을 기대하는건데 단백질 예측과 RNA는 좀 다를 듯
 
+# RAN 관련 오픈소스 모델들
 
+Transformer가 working하기 좋은 표현임
+base-pairing relationships or covariation signals에 대해 attention이 working하기 좋음
+long-range dependencies 학습
+
+heavy homology search을 avoiding하면서도 괜찮은 모델들이 있다
 
 RNAformer
 
+![Image](https://github.com/user-attachments/assets/781f1944-7925-4737-b63a-1d08826008f4)
+
+- https://www.biorxiv.org/content/10.1101/2024.02.12.579881v1.full.pdf
+use axial attention to efficiently handle longer sequences and predict secondary structure directly from single sequences.
+
+
+RNA-FM (“RNA Foundation Model”)
+- 12-layer BERT encoder
+- pre-trained on RNAcentral data (23 million RNA sequences)
+- MLM SSL
+
+
+[ERNIE-RNA](https://huggingface.co/multimolecule/ernierna)
+- is a similar transformer that integrates structure-aware objectives (it was fine-tuned to predict secondary structures and even 3D contacts)
+- structure-enhanced pre-training
+- MLM SSL
+
+
+
+[RiNALMo]
+
+
+
+2Efold-3D (RhoFold)
+
+
+
+## 구조 예측 관련
+trRosettaRNA and DeepFoldRNA
+- single RNA sequence
+- MSA search
+-  predict distances and orientations between nucleotide positions
+
+AF3
+predict RNA 3D structures from sequence by relying on deep MSA information

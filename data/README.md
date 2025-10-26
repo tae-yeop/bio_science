@@ -72,6 +72,29 @@ Protein structures are available in PDB database (about 200K protein structures)
 
 
 
+cif 파일 예시
+
+```
+data_1abc
+#
+loop_
+_atom_site.group_PDB   _atom_site.id   _atom_site.type_symbol
+_atom_site.label_atom_id  _atom_site.label_comp_id
+_atom_site.label_asym_id  _atom_site.label_seq_id
+_atom_site.Cartn_x  _atom_site.Cartn_y  _atom_site.Cartn_z  _atom_site.occupancy
+ATOM    1  N   N   GLY A   1  11.104  13.207   1.389  1.00
+ATOM    2  C   CA  GLY A   1  12.262  12.411   0.938  1.00
+ATOM    3  C   C   GLY A   1  12.060  11.102   1.719  1.00
+…
+
+```
+
+체인은 여러 개일 수 있음
+(1) 생물학적으로 짝꿍이어서
+(2) 결정학 대칭을 맞추기 위해서
+(3) 구조 비교에 도움
+
+
 ### 천연물 DB
 
 [NPASS DB](https://bidd.group/NPASS-2018/downloadnpass.html)
